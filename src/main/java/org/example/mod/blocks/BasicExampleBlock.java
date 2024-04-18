@@ -1,11 +1,10 @@
 package org.example.mod.blocks;
 
 import com.badlogic.gdx.utils.Queue;
-import dev.crmodders.flux.api.block.IModBlock;
-import dev.crmodders.flux.api.generators.BlockGenerator;
-import dev.crmodders.flux.api.generators.data.blockevent.BlockEventType;
+import dev.crmodders.flux.api.v5.block.IModBlock;
+import dev.crmodders.flux.api.v5.generators.BlockGenerator;
+import dev.crmodders.flux.api.v5.generators.data.blockevent.BlockEventType;
 import dev.crmodders.flux.logging.LogWrapper;
-import dev.crmodders.flux.tags.Identifier;
 import finalforeach.cosmicreach.blocks.Block;
 import finalforeach.cosmicreach.blocks.BlockPosition;
 import finalforeach.cosmicreach.blocks.BlockState;

@@ -1,11 +1,9 @@
 package org.example.mod;
 
 import com.badlogic.gdx.files.FileHandle;
-import dev.crmodders.flux.api.block.IModBlock;
-import dev.crmodders.flux.api.events.GameEvents;
-import dev.crmodders.flux.api.generators.BlockGenerator;
-import dev.crmodders.flux.api.resource.AssetLoader;
-import dev.crmodders.flux.api.resource.ResourceLocation;
+import dev.crmodders.flux.api.v5.events.GameEvents;
+import dev.crmodders.flux.api.v5.resource.AssetLoader;
+import dev.crmodders.flux.api.v5.resource.ResourceLocation;
 import dev.crmodders.flux.localization.LanguageFile;
 import dev.crmodders.flux.localization.TranslationApi;
 import dev.crmodders.flux.logging.LogWrapper;
