@@ -9,8 +9,8 @@
       "isTransparent":false,
       "lightAttenuation":15,
       "lightLevelRed": 0,
-      "lightLevelGreen": 0,
-      "lightLevelBlue": 0,
+      "lightLevelGreen": 5,
+      "lightLevelBlue": 8,
       "generateSlabs": false
     }
   }
