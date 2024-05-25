@@ -7,6 +7,7 @@ import dev.crmodders.flux.events.OnRegisterLanguageEvent;
 import dev.crmodders.flux.tags.Identifier;
 import dev.crmodders.flux.tags.ResourceLocation;
 import net.fabricmc.api.ModInitializer;
+import org.example.mod.block_entities.ExampleBlockEntity;
 import org.example.mod.blocks.Bedrock;
 import org.greenrobot.eventbus.Subscribe;
 
@@ -18,6 +19,11 @@ public class ExampleMod implements ModInitializer {
     @Override
     public void onInitialize() {
         FluxRegistries.EVENT_BUS.register(this);
+        FluxRegistries.ON_INITIALIZE.register(MOD_NAME, this::onInit);
+    }
+
+    public void onInit() {
+        ExampleBlockEntity.register();
     }
 
     @Subscribe
@@ -28,7 +34,7 @@ public class ExampleMod implements ModInitializer {
 
     @Subscribe
     public void onEvent(OnRegisterLanguageEvent event) {
-
+        event.registerLanguage(new ResourceLocation(MOD_ID, "languages/en-US.json").load());
     }
 
 }
