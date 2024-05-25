@@ -30,7 +30,8 @@ public class Bedrock implements IModBlock {
 
     @Override
     public void onBreak(Zone zone, Player player, BlockState blockState, BlockPosition position) {
-        ItemSlot slot = UI.hotbar.getSelectedSlot();;
+        ItemSlot slot = UI.hotbar.getSelectedSlot();
+        if(slot == null) return;
         if(slot.itemStack != null) {
             Item selected = slot.itemStack.getItem();
             String itemId = selected.getID();
@@ -46,6 +47,7 @@ public class Bedrock implements IModBlock {
     public BlockGenerator getBlockGenerator() {
         BlockGenerator generator = new BlockGenerator(BLOCK_ID, BLOCK_NAME);
         generator.createBlockState("default", "model", true, "events", true);
+        generator.addBlockEntity("examplemod:example_entity", Map.of());
         return generator;
     }
 

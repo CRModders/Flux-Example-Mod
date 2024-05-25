@@ -5,6 +5,9 @@ import dev.crmodders.flux.entities.TickableBlockEntity;
 import dev.crmodders.flux.entities.interfaces.IRenderable;
 import dev.crmodders.flux.tags.Identifier;
 import finalforeach.cosmicreach.blockentities.BlockEntityCreator;
+import finalforeach.cosmicreach.blocks.Block;
+import finalforeach.cosmicreach.blocks.BlockPosition;
+import finalforeach.cosmicreach.blocks.BlockState;
 import org.example.mod.ExampleMod;
 
 public class ExampleBlockEntity extends TickableBlockEntity implements IRenderable {
@@ -19,7 +22,12 @@ public class ExampleBlockEntity extends TickableBlockEntity implements IRenderab
 
     @Override
     public void onTick(float tps) {
-        // add custom ticking logic
+        BlockPosition above = position.getOffsetBlockPos(position.chunk.region.zone, 0, 1, 0);
+        BlockState current = above.getBlockState();
+        if(current.getBlock() == Block.AIR) {
+            above.setBlockState(Block.GRASS.getDefaultBlockState());
+            above.flagTouchingChunksForRemeshing(position.chunk.region.zone, false);
+        }
     }
 
     @Override
