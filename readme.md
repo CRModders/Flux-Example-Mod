@@ -1,3 +1,8 @@
+> [!IMPORTANT]
+> FluxAPI has been discontinued.
+>
+> It is still avaliable for legacy mods.
+
 # Flux Example Mod
 A simple example mod showing the main feature of flux. This is restricted to fabric loader methods but runs on Quilt near perfectly.
 
